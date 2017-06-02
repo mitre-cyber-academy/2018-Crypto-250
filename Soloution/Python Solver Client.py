@@ -5,7 +5,7 @@ import sys
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Connect the socket to the port where the server is listening
-server_address = ('192.168.106.130', 6900)
+server_address = ('192.168.106.130', 6901)
 print >>sys.stderr, 'connecting to %s port %s' % server_address
 sock.connect(server_address)
 # The AES key used for encrytp/decrypt is "3DF2104AB016B2DE" 
