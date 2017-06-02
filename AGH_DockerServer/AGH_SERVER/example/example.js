@@ -17,7 +17,7 @@ function routeToRoom(tempX,tempY,roomTemp,cb) {
 
     tempX = tempX.replace(/n/g, '');
     tempY = tempY.replace(/n/g, '');
-
+    console.log('x: ' + tempX + ' y: ' + tempY + ' room: ' + roomTemp);
     if(roomTemp == 1) {point_distance(tempX,tempY,1900,700, function(idd) {distance = idd;}); if(distance < 40){goodToGO = 1;} }
 	if(roomTemp == 2) {point_distance(tempX,tempY,1900,480, function(idd) {distance = idd;}); if(distance < 40){goodToGO = 2;} }
 	if(roomTemp == 3) {point_distance(tempX,tempY,900,700, function(idd) {distance = idd;}); if(distance < 40){goodToGO = 3;} 
@@ -72,13 +72,21 @@ function encrypt(text){
 }
  
 function decrypt(text){
-  var newtext = new Buffer.from(text,'hex')
-  var decipher = crypto.createDecipheriv(algorithm,password,'')
-  decipher.setAutoPadding(false)
-  var dec = decipher.update(newtext,'hex', 'ascii')
-  dec += decipher.final('ascii');
-  //console.log(dec);
-  return dec;
+	try 
+	{
+     var newtext = new Buffer.from(text,'hex')
+     var decipher = crypto.createDecipheriv(algorithm,password,'')
+  	 decipher.setAutoPadding(false)
+ 	 var dec = decipher.update(newtext,'hex', 'ascii')
+ 	 dec += decipher.final('ascii');
+ 	 //console.log(dec);
+ 	 return dec;
+    }
+    catch (e) { 
+      console.log('bad decrypt');
+    }
+    return '0';
+  
 }
 
 
