@@ -116,10 +116,10 @@ if(y &lt; 0){y = yprevious; vspeed = 5}
      if(create == 0)
     {
          net_cmd_init("main")
-         gh = AES_auto16(x,"3DF2104AB016B2DE",0);
+         gh = AES_auto16(x,"7AA2701864CB9C4F",0);
          net_cmd_add_data("x",gh)
-         net_cmd_add_data("y",AES_auto16(y,"3DF2104AB016B2DE",0))
-         net_cmd_add_data("room",AES_auto16(global.CurrentRoom,"3DF2104AB016B2DE",0))//x = global.CurrentRoom
+         net_cmd_add_data("y",AES_auto16(y,"7AA2701864CB9C4F",0))
+         net_cmd_add_data("room",AES_auto16(global.CurrentRoom,"7AA2701864CB9C4F",0))//x = global.CurrentRoom
          net_cmd_send(0,0)
          lastSend = current_time;
          create = 1;
@@ -211,10 +211,10 @@ speed = 0;
             <string> if(current_time-lastSend &gt; 1000)
     {
          net_cmd_init("main")
-         gh = AES_auto16(x,"3DF2104AB016B2DE",0);
+         gh = AES_auto16(x,"7AA2701864CB9C4F",0);
          net_cmd_add_data("x",gh)
-         net_cmd_add_data("y",AES_auto16(y,"3DF2104AB016B2DE",0))
-         net_cmd_add_data("room",AES_auto16(global.CurrentRoom,"3DF2104AB016B2DE",0))//x = global.CurrentRoom
+         net_cmd_add_data("y",AES_auto16(y,"7AA2701864CB9C4F",0))
+         net_cmd_add_data("room",AES_auto16(global.CurrentRoom,"7AA2701864CB9C4F",0))//x = global.CurrentRoom
          net_cmd_send(0,0)
          lastSend = current_time;
     }

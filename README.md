@@ -26,6 +26,6 @@ the command that makes the client go to room 4 which has the MCA key on it
 
 # Flag
 
-flag is: MCA{JG04fGame_Maker_Pros_!_A_n00b}
+flag is: MCA{JG04fNo0bNumyipYapskiddleBop}
 
 

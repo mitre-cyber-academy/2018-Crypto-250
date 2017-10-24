@@ -38,9 +38,9 @@ gameManager.addCommandListener('main', function(client, data) {
 		routeToRoom(data.x,data.y,roomToSend, function(id) {
    		 if(id != 0){roomToSend = ""+(parseInt(roomToSend, 10)+1);  }
    		 if(id == 3){	var vunk1 = encrypt('MCA{JG04f'); 
-   		 				var vunk2 = encrypt('Game_Maker');
-   		 				var vunk3 = encrypt('_Pros_!_');
-   		 				var vunk4 = encrypt('A_n00b}');
+   		 				var vunk2 = encrypt('No0bNum');
+   		 				var vunk3 = encrypt('yipYap');
+   		 				var vunk4 = encrypt('skiddleBop}');
    		 				client.send({command: 'Upflag', chunk1: vunk1, chunk2: vunk2, chunk3: vunk3,chunk4: vunk4 });  
    		 					
    		 				console.log("Sending Flag to user")
@@ -56,7 +56,7 @@ gameManager.addCommandListener('main', function(client, data) {
 
 var crypto = require('crypto'),
     algorithm = 'aes-128-ecb', // 'aes-128-ctr'
-    password =  new Buffer('3DF2104AB016B2DE') //
+    password =  new Buffer('7AA2701864CB9C4F') //
 
 
     //const ciphers = crypto.getCiphers();

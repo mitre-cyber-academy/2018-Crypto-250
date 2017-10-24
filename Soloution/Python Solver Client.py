@@ -8,12 +8,13 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_address = ('192.168.106.130', 6901)
 print >>sys.stderr, 'connecting to %s port %s' % server_address
 sock.connect(server_address)
-# The AES key used for encrytp/decrypt is "3DF2104AB016B2DE" 
+# The AES key used for encrytp/decrypt is "7AA2701864CB9C4F"
+#(old version used "3DF2104AB016B2DE" )
 # below room is 3
 message = ('{ "command": "main", "x": ' 
-		'"B8E65C3EB25022E2EFB6E4953BE25CBB",'
-		' "y": "76834D38CD1B828B83A229D03198B38C",'
-		' "room":"5C3350B0DB38B5EC1820C2EAADAD2D74' 	
+		'"701EA1EE8727AB76E26DBCC712560F2C",'
+		' "y": "75B517D10F0335A04D0BC99A1A681B2B",'
+		' "room":"D3D0083B6462A288CF36DA26A21ACBC5' 	
 		'"}')
 print >>sys.stderr, 'sending "%s"' % message
 sock.sendall(message)
@@ -30,8 +31,6 @@ while amount_received < amount_expected:
 
 print >>sys.stderr, 'closing socket'
 sock.close()
-
-
 
 
 
