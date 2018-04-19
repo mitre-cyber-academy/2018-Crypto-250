@@ -29,11 +29,11 @@
 
 gravity = .1;
 gravity_direction = 270;
-global.ip = "10.0.2.12"
+global.ip = "hardGame.mitrestemctf.org"
 
 Socket = network_create_socket( network_socket_tcp );
 net_init();
-isConnected = network_connect_raw( global.netSock , global.ip , 6901 );
+isConnected = network_connect_raw( global.netSock , global.ip , 6900 );
 
 net_cmd_add_handler("connected", connectedExecuteMe);
 net_cmd_add_handler("main", handle_chat);
